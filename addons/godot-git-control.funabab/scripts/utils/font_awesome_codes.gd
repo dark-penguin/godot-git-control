@@ -792,7 +792,7 @@ const Icons = {
 	"meetup": "\uf2e0"
 }
 
-static func get(key):
+static func get_icon(key):
 	if Icons.has(key):
 		return Icons[key];
 	return "";
