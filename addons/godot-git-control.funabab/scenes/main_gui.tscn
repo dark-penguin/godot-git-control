@@ -191,7 +191,7 @@ func setup_root_item():
 	root_item = create_child_item(get_root(),
 	{
 		CELL_ICON: FontAwesome.get(\"hdd-o\"),
-		CELL_NAME: root.git.Lang.tr(\"workspace\")
+		CELL_NAME: root.git.Lang.find_tr(\"workspace\")
 	}, false);
 	root_item.disable_folding = true;
 	pass

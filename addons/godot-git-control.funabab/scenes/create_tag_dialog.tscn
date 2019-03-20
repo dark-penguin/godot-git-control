@@ -8,18 +8,18 @@ extends \"res://addons/godot-git-control.funabab/scripts/git_dialog.gd\"
 
 var tag_name_input;
 func _get_ok_btn_text():
-	return Lang.tr(\"prop_btn_text_create_tag\");
+	return Lang.find_tr(\"prop_btn_text_create_tag\");
 	pass
 
 func _get_custom_btn_text():
-	return Lang.tr(\"prop_btn_text_force_tag\");
+	return Lang.find_tr(\"prop_btn_text_force_tag\");
 	pass
 
 func _tr():
-	window_title = Lang.tr(\"prop_window_title_create_tag\");
-	$container/tag_name/label.text = Lang.tr(\"prop_label_text_tag_name\");
-	$container/tag_commit/label.text = Lang.tr(\"prop_label_text_commit_ref\");
-	$container/tag_commit/label.text = Lang.tr(\"prop_label_text_tag_commit_msg\");
+	window_title = Lang.find_tr(\"prop_window_title_create_tag\");
+	$container/tag_name/label.text = Lang.find_tr(\"prop_label_text_tag_name\");
+	$container/tag_commit/label.text = Lang.find_tr(\"prop_label_text_commit_ref\");
+	$container/tag_commit/label.text = Lang.find_tr(\"prop_label_text_tag_commit_msg\");
 	pass
 
 func _get_result(custom):

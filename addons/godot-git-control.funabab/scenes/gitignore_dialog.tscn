@@ -24,7 +24,7 @@ func _on_show_dialog(args):
 	pass
 
 func _tr():
-	window_title = Lang.tr(\"prop_window_title_gitignore_manager\");
+	window_title = Lang.find_tr(\"prop_window_title_gitignore_manager\");
 	pass
 
 func _get_result(custom):

@@ -11,17 +11,17 @@ var current_branch;
 var branches = [];
 
 func _get_ok_btn_text():
-	return Lang.tr(\"prop_btn_text_create_branch\");
+	return Lang.find_tr(\"prop_btn_text_create_branch\");
 	pass
 
 func _get_custom_btn_text():
-	return Lang.tr(\"prop_btn_text_checkout_branch\");
+	return Lang.find_tr(\"prop_btn_text_checkout_branch\");
 	pass
 
 func _tr():
-	window_title = Lang.tr(\"prop_window_title_create_branch\");
-	$container/current_branch/label.text = Lang.tr(\"prop_label_text_current_branch\");
-	$container/new_branch/label.text = Lang.tr(\"prop_label_text_new_branch\");
+	window_title = Lang.find_tr(\"prop_window_title_create_branch\");
+	$container/current_branch/label.text = Lang.find_tr(\"prop_label_text_current_branch\");
+	$container/new_branch/label.text = Lang.find_tr(\"prop_label_text_new_branch\");
 	pass
 
 func _on_ready():

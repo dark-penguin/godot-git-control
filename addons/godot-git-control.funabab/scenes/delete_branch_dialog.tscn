@@ -8,11 +8,11 @@ extends \"res://addons/godot-git-control.funabab/scripts/git_dialog.gd\"
 
 var selected_branch;
 func _get_ok_btn_text():
-	return Lang.tr(\"prop_btn_text_delete_branch\");
+	return Lang.find_tr(\"prop_btn_text_delete_branch\");
 	pass
 
 func _get_custom_btn_text():
-	return Lang.tr(\"prop_btn_text_force_delete_branch\");
+	return Lang.find_tr(\"prop_btn_text_force_delete_branch\");
 	pass
 
 func _get_result(custom):
@@ -24,7 +24,7 @@ func _get_result(custom):
 
 func _on_show_dialog(args):
 	selected_branch = args;
-	dialog_text = Lang.tr(\"confirm_delete_branch\") % selected_branch;
+	dialog_text = Lang.find_tr(\"confirm_delete_branch\") % selected_branch;
 	pass"
 _sections_unfolded = [ "Resource" ]
 

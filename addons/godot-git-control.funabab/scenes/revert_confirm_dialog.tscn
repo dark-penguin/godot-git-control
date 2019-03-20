@@ -7,11 +7,11 @@ script/source = "tool
 extends \"res://addons/godot-git-control.funabab/scripts/git_dialog.gd\"
 
 func _get_ok_btn_text():
-	return Lang.tr(\"prop_btn_text_revert_objects\");
+	return Lang.find_tr(\"prop_btn_text_revert_objects\");
 	pass
 
 func _tr():
-	dialog_text = Lang.tr(\"prop_dialog_text_revert_objects\");
+	dialog_text = Lang.find_tr(\"prop_dialog_text_revert_objects\");
 	pass"
 _sections_unfolded = [ "Resource" ]
 

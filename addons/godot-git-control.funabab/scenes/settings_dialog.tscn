@@ -19,7 +19,7 @@ func _on_ready():
 	pass
 
 func _tr():
-	window_title = Lang.tr(\"prop_window_title_title_settings\");
+	window_title = Lang.find_tr(\"prop_window_title_title_settings\");
 	pass
 
 func _get_cancel_btn_text():
@@ -75,7 +75,7 @@ func set_ui():
 				input_node.connect(\"text_changed\", self, \"_on_list_item_val_text_input_changed\", [container]);
 			TYPE_BOOL:
 				input_node = CheckBox.new();
-				input_node.text = manager.git.Lang.tr(\"value_on\");
+				input_node.text = manager.git.Lang.find_tr(\"value_on\");
 				default_value = Settings.get_default(key);
 				input_node.size_flags_horizontal = Control.SIZE_EXPAND_FILL;
 				input_node.connect(\"toggled\", self, \"_on_list_item_val_input_toggled\", [container]);

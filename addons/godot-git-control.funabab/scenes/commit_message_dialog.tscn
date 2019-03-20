@@ -7,12 +7,12 @@ script/source = "tool
 extends \"res://addons/godot-git-control.funabab/scripts/git_dialog.gd\"
 
 func _get_ok_btn_text():
-	return Lang.tr(\"prop_btn_text_commit\");
+	return Lang.find_tr(\"prop_btn_text_commit\");
 	pass
 
 func _tr():
-	window_title = Lang.tr(\"prop_window_title_enter_commit_msg\");
-	dialog_text = Lang.tr(\"prop_dialog_text_commit_msg\");
+	window_title = Lang.find_tr(\"prop_window_title_enter_commit_msg\");
+	dialog_text = Lang.find_tr(\"prop_dialog_text_commit_msg\");
 	pass
 
 func _get_result(custom):
