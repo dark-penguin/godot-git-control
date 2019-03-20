@@ -190,7 +190,7 @@ func setup_root_item():
 
 	root_item = create_child_item(get_root(),
 	{
-		CELL_ICON: FontAwesome.get(\"hdd-o\"),
+		CELL_ICON: FontAwesome.get_icon(\"hdd-o\"),
 		CELL_NAME: root.git.Lang.find_tr(\"workspace\")
 	}, false);
 	root_item.disable_folding = true;
@@ -219,14 +219,14 @@ func update_workspace_tree(workspace_objects):
 	var idx = 0;
 	for object in workspace_objects:
 		var icons = {
-			object.OBJECT_TYPE_MODIFIED: FontAwesome.get(\"file\"),
-			object.OBJECT_TYPE_DELETED: FontAwesome.get(\"times\"),
-			object.OBJECT_TYPE_CONFLICT: FontAwesome.get(\"exclamation-circle\"),
-			object.OBJECT_TYPE_ADDED: FontAwesome.get(\"plus-circle\")
+			object.OBJECT_TYPE_MODIFIED: FontAwesome.get_icon(\"file\"),
+			object.OBJECT_TYPE_DELETED: FontAwesome.get_icon(\"times\"),
+			object.OBJECT_TYPE_CONFLICT: FontAwesome.get_icon(\"exclamation-circle\"),
+			object.OBJECT_TYPE_ADDED: FontAwesome.get_icon(\"plus-circle\")
 		}
 		var item = create_child_item(root_item,
 		{
-			CELL_ICON: icons[object.type] if icons.has(object.type) else FontAwesome.get(\"question-circle\"),
+			CELL_ICON: icons[object.type] if icons.has(object.type) else FontAwesome.get_icon(\"question-circle\"),
 			CELL_NAME: object.path
 		});
 		item.set_metadata(CELL_CHECKBOX, idx);
