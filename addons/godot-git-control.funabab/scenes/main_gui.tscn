@@ -162,7 +162,7 @@ const CELL_ICON = 0;
 const CELL_NAME = 1;
 const CELL_CHECKBOX = 2;
 
-var FontAwesome = preload(\"res://addons/godot-git-control.funabab/scripts/utils/font_awesome_codes.gd\");
+var Octicon = preload(\"res://addons/godot-git-control.funabab/scripts/utils/octicons_codes.gd\");
 var total_objects = 0;
 var selected_objects = 0;
 
@@ -190,7 +190,7 @@ func setup_root_item():
 
 	root_item = create_child_item(get_root(),
 	{
-		CELL_ICON: FontAwesome.get_icon(\"hdd-o\"),
+		CELL_ICON: Octicon.get_icon(\"briefcase\"),
 		CELL_NAME: root.git.Lang.find_tr(\"workspace\")
 	}, false);
 	root_item.disable_folding = true;
@@ -219,14 +219,14 @@ func update_workspace_tree(workspace_objects):
 	var idx = 0;
 	for object in workspace_objects:
 		var icons = {
-			object.OBJECT_TYPE_MODIFIED: FontAwesome.get_icon(\"file\"),
-			object.OBJECT_TYPE_DELETED: FontAwesome.get_icon(\"times\"),
-			object.OBJECT_TYPE_CONFLICT: FontAwesome.get_icon(\"exclamation-circle\"),
-			object.OBJECT_TYPE_ADDED: FontAwesome.get_icon(\"plus-circle\")
+			object.OBJECT_TYPE_MODIFIED: Octicon.get_icon(\"diff-modified\"),
+			object.OBJECT_TYPE_DELETED: Octicon.get_icon(\"diff-removed\"),
+			object.OBJECT_TYPE_CONFLICT: Octicon.get_icon(\"alert\"),
+			object.OBJECT_TYPE_ADDED: Octicon.get_icon(\"diff-added\")
 		}
 		var item = create_child_item(root_item,
 		{
-			CELL_ICON: icons[object.type] if icons.has(object.type) else FontAwesome.get_icon(\"question-circle\"),
+			CELL_ICON: icons[object.type] if icons.has(object.type) else Octicon.get_icon(\"question\"),
 			CELL_NAME: object.path
 		});
 		item.set_metadata(CELL_CHECKBOX, idx);

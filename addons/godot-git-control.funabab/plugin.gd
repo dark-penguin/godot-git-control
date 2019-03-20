@@ -63,7 +63,7 @@ func _exit_tree():
 func adapt_font_size_to_dpi():
 	var f_size = get_editor_interface().get_base_control().theme.default_font.get_height()
 	
-	var f_awsome = load("res://addons/godot-git-control.funabab/scenes/res/font_awesome_font.tres")
+	# var f_awsome = load("res://addons/godot-git-control.funabab/scenes/res/font_awesome_font.tres")
 	var f_octicon = load("res://addons/godot-git-control.funabab/scenes/res/octicon_font.tres")
-	f_awsome.size = f_size
+	# f_awsome.size = f_size
 	f_octicon.size = f_size
